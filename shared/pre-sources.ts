@@ -101,6 +101,10 @@ export const originSources = {
       quick: {
         title: "快讯",
       },
+      renqi: {
+        type: "hottest",
+        title: "人气榜",
+      },
     },
   },
   "douyin": {
@@ -201,6 +205,19 @@ export const originSources = {
       },
     },
   },
+  "xueqiu": {
+    name: "雪球",
+    color: "blue",
+    home: "https://xueqiu.com",
+    column: "finance",
+    sub: {
+      hotstock: {
+        title: "热门股票",
+        interval: Time.Realtime,
+        type: "hottest",
+      },
+    },
+  },
   "gelonghui": {
     name: "格隆汇",
     color: "blue",
@@ -216,6 +233,11 @@ export const originSources = {
     home: "https://www.fastbull.cn",
     column: "finance",
     sub: {
+      express: {
+        title: "快讯",
+        type: "realtime",
+        interval: Time.Realtime,
+      },
       news: {
         title: "头条",
         interval: Time.Common,
@@ -235,6 +257,13 @@ export const originSources = {
     column: "tech",
     type: "hottest",
     home: "https://news.ycombinator.com/",
+  },
+  "producthunt": {
+    name: "Product Hunt",
+    color: "red",
+    column: "tech",
+    type: "hottest",
+    home: "https://www.producthunt.com/",
   },
   "github": {
     name: "Github",
@@ -258,7 +287,29 @@ export const originSources = {
         column: "china",
         type: "hottest",
       },
+      "hot-video": {
+        title: "热门视频",
+        disable: "cf",
+        column: "china",
+        type: "hottest",
+      },
+      "ranking": {
+        title: "排行榜",
+        column: "china",
+        disable: "cf",
+        type: "hottest",
+        interval: Time.Common,
+      },
     },
+  },
+  "kuaishou": {
+    name: "快手",
+    type: "hottest",
+    column: "china",
+    color: "orange",
+    // cloudflare pages cannot access
+    disable: "cf",
+    home: "https://www.kuaishou.com",
   },
   "kaopu": {
     name: "靠谱新闻",
@@ -394,6 +445,15 @@ export const originSources = {
       },
     },
   },
+  "freebuf": {
+    name: "Freebuf",
+    column: "china",
+    title: "网络安全",
+    color: "green",
+    type: "hottest",
+    home: "https://www.freebuf.com/",
+  },
+
   "qqvideo": {
     name: "腾讯视频",
     column: "china",
